@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15152453308201" configfile="/JsfLogin/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" id="pf15152453388502" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf151524550105411 pf151524550547413" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="resultforsuccess.xhtml" id="pf151524550105512" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf151524550105411" path="success.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="resultforfail.xhtml" id="pf151524550547414" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf151524550547413" path="fail.xhtml"/>
+  <links id="pf151524550105411" target="pf151524550105512" source="pf15152453388502" outcome="success" fromaction="#{SimpleLogin.CheckValidUser}"/>
+  <links id="pf151524550547413" target="pf151524550547414" source="pf15152453388502" outcome="fail" fromaction="#{SimpleLogin.CheckValidUser}"/>
+</pageflow:Pageflow>
